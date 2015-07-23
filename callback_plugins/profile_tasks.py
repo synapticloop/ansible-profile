@@ -48,18 +48,12 @@ class CallbackModule(object):
 
         # the total time for all of the roles/tasks
         totalTime = 0;
+
         # the timings for the role
-        roleTimings = {}
 
         # Print the timings
         for name, elapsed in results:
             # build up the role timings
-            strippedName = name[:name.find("|")]
-            if(strippedName in roleTimings):
-                roleTimings[strippedName] = roleTimings[strippedName] + elapsed 
-            else:
-                roleTimings[strippedName] = elapsed
-
             print(
                 "{0:-<70}{1:->9}".format(
                     '{0} '.format(name),
@@ -76,16 +70,6 @@ class CallbackModule(object):
                 "{0:-<70}{1:->9}".format(
                     '{0} '.format(name),
                     ' {0:.02f}s'.format(elapsed),
-                )
-            )
-
-        # Display the times per role
-        display(callbacks.banner("ROLE TIMES"))
-        for role, timing in sorted(roleTimings.iteritems(), key=lambda (k,v): (v,k), reverse=True):
-            print(
-                "{0:-<70}{1:->9}".format(
-                    '{0} '.format(role),
-                    ' {0:.02f}s'.format(timing),
                 )
             )
 
