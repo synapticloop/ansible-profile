@@ -32,7 +32,9 @@ Now, run your playbook just as you normally would!
 .. code-block:: bash
 
    ansible <args here>
+
    <normal output here>
+
    PLAY RECAP ******************************************************************** 
 
    PLAY TIMINGS ****************************************************************** 
