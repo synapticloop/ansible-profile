@@ -96,3 +96,8 @@ Now, run your playbook just as you normally would!
    
    TOTAL TIME ******************************************************************** 
     ---------------------------------------------------------------------   69.22s
+
+Notes:
+^^^^^
+
+If the task is not assigned to a role, this will automatically be assigned to <NO_DEFINED_ROLE>
